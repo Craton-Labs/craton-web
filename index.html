@@ -32,17 +32,20 @@
         .logo-container {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px; /* Increased gap slightly for the larger icon */
             margin-bottom: 0.5rem;
         }
-        .chip-icon {
-            width: 24px;
-            height: 24px;
-            background: linear-gradient(145deg, #333, #1a1a1a);
-            border: 1px solid #444;
-            border-radius: 4px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+        
+        /* NEW IMAGE STYLES */
+        .logo-img {
+            width: 32px; /* Slightly larger so pixels are clear */
+            height: auto;
+            /* Crucial for pixel art scale: keeps edges sharp instead of blurry */
+            image-rendering: pixelated; 
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
         }
+
         h1.brand-name {
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 700;
@@ -110,10 +113,10 @@
 <body>
 
     <div class="logo-container">
-        <div class="chip-icon"></div>
+        <img src="bedrock-cube.png" alt="Craton Bedrock Icon" class="logo-img">
         <h1 class="brand-name">Craton Labs</h1>
     </div>
-
+    
     <p class="subtitle">
         Building the bedrock of machine intelligence.
     </p>
